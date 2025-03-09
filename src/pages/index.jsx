@@ -13,34 +13,37 @@ import Pages from '@/components/Preview/Pages';
 import ShopDemos from '@/components/Preview/ShopDemos';
 import CallToAction from '@/components/Preview/CallToAction';
 import Footer from '@/components/Preview/Footer';
+import HomeMainLight from './light/home-main';
 
 function LandingPreview() {
-  useEffect(() => {
-    document.body.classList.add('sub-bg');
-    return () => document.body.classList.remove('sub-bg');
-  }, []);
+  // useEffect(() => {
+  //   document.body.classList.add('sub-bg');
+  //   return () => document.body.classList.remove('sub-bg');
+  // }, []);
 
   return (
     <>
       <Head>
-        <title>Geekfolio - Preview</title>
+        <title>Website - Preview</title>
       </Head>
 
-      <Navbar />
-      <Overlay />
-      <main>
+      {/* <Navbar />
+      <Overlay /> */}
+        <HomeMainLight />
+      {/* <main>
         <Header />
+      
         <Demos />
         <Marq />
         <Pages />
         <ShopDemos />
         <CallToAction />
         <Footer />
-      </main>
+      </main> */}
     </>
   )
 }
 
-LandingPreview.getLayout = page => <Layout>{page}</Layout>
+// LandingPreview.getLayout = page => <Layout>{page}</Layout>
 
 export default LandingPreview;
